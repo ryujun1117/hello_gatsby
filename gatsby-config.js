@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Mt.Tateyama and White Snow`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Seto Ryuichi`,
+      summary: `who lives and works in Tokyo(JPN) building useful things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://hardcore-varahamihira-1b7fb1.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `@ryuryud28`,
     },
   },
   plugins: [

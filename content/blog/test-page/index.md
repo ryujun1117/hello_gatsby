@@ -4,13 +4,12 @@ date: "2022-02-10T22:12:03.284Z"
 description: "ドキュメント作成のコツ。<br> エキスパートPythonプログラミング改訂3版　より"
 ---
 
-This is my first post on my new fake blog! How exciting!
+テンプレを少しずつ変更しながら作っています（2022/02/10）!
 
-I'm sure I'll write a lot more interesting things in the future.
+構築環境はDockerを利用して、node環境を立ち上げ、Gatsbyを入れて使っています。あとnetlifyでホスティングしています。
+[netlifyはこちら](https://www.netlify.com/).
 
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](https://en.wikipedia.org/wiki/Salted_duck_egg).
-
+以下で引用形式で記述できる様子。
 > A salted duck egg is a Chinese preserved food product made by soaking duck
 > eggs in brine, or packing each egg in damp, salted charcoal. In Asian
 > supermarkets, these eggs are sometimes sold covered in a thick layer of salted
@@ -18,24 +17,25 @@ Oh, and here's a great quote from this Wikipedia on
 > wrapped in plastic, and vacuum packed. From the salt curing process, the
 > salted duck eggs have a briny aroma, a gelatin-like egg white and a
 > firm-textured, round yolk that is bright orange-red in color.
+> 私はわたしが好きなあなたが好きだ。←できた！
 
-![Chinese Salty Egg](./salty_egg.jpg)
+![DockerでGatsby環境の構築](./sample.png)
 
-You can also write code blocks here!
+コードも以下のように書ける！↓
 
 ```js
-const saltyDuckEgg = "chinese preserved food product"
+const saltyDuckEgg = "今日は大雪注意報が発令されていて、関東でも積雪があった日"
 ```
 
 | Number | Title                                    | Year |
 | :----- | :--------------------------------------- | ---: |
-| 1      | Harry Potter and the Philosopher’s Stone | 2001 |
-| 2      | Harry Potter and the Chamber of Secrets  | 2002 |
-| 3      | Harry Potter and the Prisoner of Azkaban | 2004 |
+| 1      | ハリーポッターと賢者の石 | 2001 |
+| 2      | ハリーポッターと秘密の部屋  | 2002 |
+| 3      | ハリーポッターとアズカバンの囚人 | 2004 |
 
 [View raw (TEST.md)](https://raw.github.com/adamschwartz/github-markdown-kitchen-sink/master/README.md)
 
-This is a paragraph.
+段落構成は以下の用な感じ！
 
     This is a paragraph.
 
@@ -43,11 +43,6 @@ This is a paragraph.
 
 ## Header 2
 
-    Header 1
-    ========
-
-    Header 2
-    --------
 
 # Header 1
 
@@ -68,6 +63,7 @@ This is a paragraph.
     ##### Header 5
     ###### Header 6
 
+
 # Header 1
 
 ## Header 2
@@ -80,7 +76,7 @@ This is a paragraph.
 
 ###### Header 6
 
-    # Header 1 #
+    # ヘッダー 1 #
     ## Header 2 ##
     ### Header 3 ###
     #### Header 4 ####
@@ -93,12 +89,18 @@ This is a paragraph.
 
 > ## This is a header.
 >
-> 1. This is the first list item.
+> 1. リストはこんなかんじ～.
 > 2. This is the second list item.
 >
 > Here's some example code:
 >
 >     Markdown.generate();
+
+>これはどう
+>以下、変換されないで書くことができる
+
+
+
 
     > ## This is a header.
     > 1. This is the first list item.
