@@ -1,0 +1,73 @@
+Juman++のインストール
+https://qiita.com/riverwell/items/438e88427363511e9f28
+
+前提
+以下のDockerfileをカレントディレクトリにおく
+FROM ubuntu:20.04
+RUN apt-get update
+RUN apt-get install -y python3 python3-pip
+
+--
+
+docker build -t example --no-cache .
+docker run -it example
+
+前提パッケージのインストール
+$ apt-get install libboost-dev
+$ apt-get install build-essential
+
+Juman++の本体をインストール
+
+※Dockerがまっさらで立ち上げたので
+$ apt-get install wget
+
+$ wget http://lotus.kuee.kyoto-u.ac.jp/nl-resource/jumanpp/jumanpp-1.01.tar.xz
+$ tar xJvf jumanpp-1.01.tar.xz
+$ cd jumanpp-1.01/
+$ ./configure
+$ make
+$ sudo make install
+
+※make, make install でかなり時間がかかる。
+
+$ jumanpp
+お正月の寒さは最近耐えられない。
+お お お 接頭辞 13 名詞接頭辞 1 * 0 * 0 "代表表記:御/お"
+正月 しょうがつ 正月 名詞 6 時相名詞 10 * 0 * 0 "代表表記:正月/しょうがつ カテゴリ:時間 ドメイン:家庭・暮らし"
+の の の 助詞 9 格助詞 1 * 0 * 0 NIL
+寒 さむ 寒い 形容詞 3 * 0 イ形容詞アウオ段 18 語幹 1 "代表表記:寒い/さむい 反義:形容詞:暑い/あつい"
+さ さ さ 接尾辞 14 名詞性述語接尾辞 1 * 0 * 0 "代表表記:さ/さ 準内容語 カ テゴリ:抽象物;数量"
+は は は 助詞 9 副助詞 2 * 0 * 0 NIL
+答 こたえ 答 名詞 6 普通名詞 1 * 0 * 0 "代表表記:答/こたえ 漢字読み:訓 カ テゴリ:抽象物"
+最近 さいきん 最近 名詞 6 時相名詞 10 * 0 * 0 "代表表記:最近/さいきん カテゴリ:時間"
+耐え たえ 耐える 動詞 2 * 0 母音動詞 1 未然形 3 "代表表記:耐える/たえる"
+られ られ られる 接尾辞 14 動詞性接尾辞 7 母音動詞 1 未然形 3 "代表表記:られる/られる"
+ない ない ない 接尾辞 14 形容詞性述語接尾辞 5 イ形容詞アウオ段 18 基本形 2 "代表表記:ない/ない"
+��� ��� ��� 未定義語 15 その他 1 * 0 * 0 "品詞推定:名詞"
+�� �� �� 未定義語 15 その他 1 * 0 * 0 "品詞推定:名詞"
+EOS
+
+--
+
+Pythonラッパーの準備
+https://qiita.com/riverwell/items/7a85ebf95647eaf18a6c
+
+% pip3 install six
+
+% wget http://nlp.ist.i.kyoto-u.ac.jp/nl-resource/knp/pyknp-0.3.tar.gz
+% tar xvf pyknp-0.3.tar.gz
+% cd pyknp-0.3
+% python3 setup.py install
+
+#-*- encoding: utf-8 -*-
+from pyknp import Jumanpp
+import sys
+import codecs
+sys.stdin = codecs.getreader(’utf_8’)(sys.stdin)
+sys.stdout = codecs.getwriter(’utf_8’)(sys.stdout)
+# JUMAN++をsubprocessモードで使用
+jumanpp = Jumanpp()
+result = jumanpp.analysis(u"ケーキを食べる")
+for mrph in result.mrph_list():
+    print(u"見出し:{0}".format(mrph.midasi))
+
