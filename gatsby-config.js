@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Mt.Tateyama and White Snow`,
+    title: `R.blog`,
     author: {
-      name: `Seto Ryuichi`,
-      summary: `who lives and works in Tokyo(JPN) building useful things.`,
+      name: `S*** R******`,
+      summary: `who lives and works in Tokyo(JPN) Working as a data scientist
+                 in a business consulting firm.---メモ書き以上に丁寧に。ただ読む人はあんまり想定していないブログです。---`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://hardcore-varahamihira-1b7fb1.netlify.app/`,
