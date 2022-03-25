@@ -20,12 +20,12 @@ module.exports = {
     //     pathToConfigModule: `${__dirname}/src/utils/typography`,
     //   },
     // },
-    {
-      resolve: `gatsby-plugin-netlify-cms`,
-      options: {
-        modulePath: `${__dirname}/src/cms.js`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-netlify-cms`,
+    //   options: {
+    //     modulePath: `${__dirname}/src/cms.js`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
