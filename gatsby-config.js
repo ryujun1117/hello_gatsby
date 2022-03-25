@@ -3,7 +3,7 @@ module.exports = {
     title: `R.blog`,
     author: {
       name: `S*** R******`,
-      summary: `who lives and works in Tokyo(JPN) Working as a data scientist
+      summary: `I'm Working as a data scientist
                  in a business consulting firm.---メモ書き以上に丁寧に。ただ読む人はあんまり想定していないブログです。---`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
