@@ -44,13 +44,13 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            resolve: "gatsby-remark-embed-youtube",
-            options: {
-              width: 800,
-              height: 400,
-            },
-          },
+          // {
+          //   resolve: "gatsby-remark-embed-youtube",
+          //   options: {
+          //     width: 800,
+          //     height: 400,
+          //   },
+          // },
           {
             resolve: `gatsby-remark-images`,
             options: {
